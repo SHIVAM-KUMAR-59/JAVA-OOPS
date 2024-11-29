@@ -36,7 +36,7 @@ The repository is structured into folders representing different OOP topics for 
 * Garbage Collection
 </details>
 
-<br/>
+
 
 <details close>
 <summary><b>2. Packages, Static, Singleton Class, In-built Methods</b></summary>
@@ -56,7 +56,7 @@ The repository is structured into folders representing different OOP topics for 
 * Singleton Class
 </details>
 
-<br/>
+
 
 <details close>
 <summary><b>3. Principles - Inheritance, Polymorphism, Encapsulation, Abstraction</b></summary>
@@ -88,7 +88,7 @@ The repository is structured into folders representing different OOP topics for 
 * Data Hiding
 </details>
 
-<br/>
+
 
 <details close>
 <summary><b>4. Access Control, In-built Packages, Object Class</b></summary>
@@ -113,7 +113,7 @@ The repository is structured into folders representing different OOP topics for 
 * getClass Method
 </details>
 
-<br/>
+
 
 <details close>
 <summary><b>5. Abstract Classes, Interfaces, Annotations</b></summary>
@@ -135,7 +135,7 @@ The repository is structured into folders representing different OOP topics for 
 * Nested Interfaces
 </details>
 
-<br/>
+
 
 <details close>
 <summary><b>6. Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning</b></summary>
@@ -156,7 +156,7 @@ The repository is structured into folders representing different OOP topics for 
 * Explanation of Deep Copying
 </details>
 
-<br/>
+
 
 <details close>
 <summary><b>7. Collections Framework, Vector Class, Enums in Java</b></summary>
