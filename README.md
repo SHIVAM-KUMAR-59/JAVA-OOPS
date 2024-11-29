@@ -10,7 +10,7 @@ Whether you're a beginner trying to understand OOP principles or someone looking
 The repository is structured into folders representing different OOP topics for better organization:
 
 <details close>
-<summary><b>1. Introduction & Concepts 🏗️</b></summary>
+<summary><code>1. Introduction & Concepts 🏗️</code></summary>
 
 * OOP Introduction
 * Java Classes
@@ -39,7 +39,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><b>2. Packages, Static, Singleton Class, In-built Methods</b></summary>
+<summary><code>2. Packages, Static, Singleton Class, In-built Methods</code></summary>
 
 * Packages example
 * Java Packages
@@ -59,7 +59,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><b>3. Principles - Inheritance, Polymorphism, Encapsulation, Abstraction</b></summary>
+<summary><code>3. Principles - Inheritance, Polymorphism, Encapsulation, Abstraction</code></summary>
 
 * Principles of OOP
 * Inheritance
@@ -91,7 +91,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><b>4. Access Control, In-built Packages, Object Class</b></summary>
+<summary><code>4. Access Control, In-built Packages, Object Class</code></summary>
 
 * Example: private, public and protected modifiers
 * Rules for modifiers
@@ -116,7 +116,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><b>5. Abstract Classes, Interfaces, Annotations</b></summary>
+<summary><code>5. Abstract Classes, Interfaces, Annotations</code></summary>
 
 * Multiple Inheritance Problem
 * Abstract Classes
@@ -138,7 +138,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><b>6. Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning</b></summary>
+<summary><code>6. Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning</code></summary>
 
 * Custom ArrayList
 * Problem with Custom ArrayList
@@ -159,7 +159,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><b>7. Collections Framework, Vector Class, Enums in Java</b></summary>
+<summary><code>7. Collections Framework, Vector Class, Enums in Java</code></summary>
 
 * Collections Framework
 * Need of Collection Framework in Java
@@ -169,7 +169,9 @@ The repository is structured into folders representing different OOP topics for 
 * Vector Code Example
 * Enums in Java
 * Enum Inheritance
+
 </details>
+
 
 ---
 
