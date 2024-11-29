@@ -9,31 +9,167 @@ Whether you're a beginner trying to understand OOP principles or someone looking
 ## **Contents** 📂
 The repository is structured into folders representing different OOP topics for better organization:
 
-1. **Basics of OOP** 🏗️
-    - Introduction to Classes and Objects
-    - Understanding `this` and `super` keywords
+<details close>
+<summary><b>1. Introduction & Concepts 🏗️</b></summary>
 
-2. **Encapsulation** 🔒
-    - Access Modifiers (`private`, `protected`, `public`)
-    - Getters and Setters
+* OOP Introduction
+* Java Classes
+* Example of a Class
+* Java Objects
+* Class vs Object
+* Properties of Object
+* Objects Introduction
+* How to access instance variables?
+* How to create objects?
+* Dynamic Memory Allocation
+* How to manipulate objects?
+* Java Constructors
+* By Default Constructor
+* Creating Constructors
+* `this` keyword
+* Constructor Overloading
+* Calling a constructor from another constructor
+* Why we don't use `new` keyword for creating primitive data types?
+* Memory Allocation of `new` keyword
+* Wrapper Classes
+* `final` keyword
+* Garbage Collection
+</details>
 
-3. **Inheritance** 🌳
-    - Single and Multilevel Inheritance
-    - Method Overriding
-    - Using `final` in inheritance
+<br/>
 
-4. **Polymorphism** 🎭
-    - Method Overloading (Compile-time)
-    - Method Overriding (Runtime)
+<details close>
+<summary><b>2. Packages, Static, Singleton Class, In-built Methods</b></summary>
 
-5. **Abstraction** 🧩
-    - Abstract Classes
-    - Interfaces and Multiple Inheritance
+* Packages example
+* Java Packages
+* `import` statement
+* Static elements example
+* `static` in Java
+* Static variable meaning
+* Non-static member inside a static
+* Static member inside a non-static
+* `this` keyword inside static
+* Initialisation of static variables
+* Inner Classes
+* Internal working of some statements
+* Singleton Class
+</details>
 
-6. **Other OOP Features** 🛠️
-    - Static Members and Methods
-    - Inner Classes
-    - Anonymous Classes
+<br/>
+
+<details close>
+<summary><b>3. Principles - Inheritance, Polymorphism, Encapsulation, Abstraction</b></summary>
+
+* Principles of OOP
+* Inheritance
+* Example: Box
+* `private` keyword
+* `super` keyword
+* Single Inheritance
+* Multiple Inheritance
+* Hierarchical Inheritance
+* Hybrid Inheritance
+* Polymorphism
+* Example: Shapes
+* Types of Polymorphism
+* Static Polymorphism
+* Overloading
+* Dynamic Polymorphism
+* Overriding
+* How Overriding Works?
+* How Java determines which method to run?
+* `final` keyword
+* Can we override static methods?
+* Encapsulation
+* Abstraction
+* Encapsulation vs Abstraction
+* Example
+* Data Hiding
+</details>
+
+<br/>
+
+<details close>
+<summary><b>4. Access Control, In-built Packages, Object Class</b></summary>
+
+* Example: private, public and protected modifiers
+* Rules for modifiers
+* When to use which modifier?
+* Important point for protected modifier
+* More about Packages
+* In-built Packages
+* `lang` package
+* `io` package
+* `util` package
+* `applet` package
+* `awt` package
+* `net` package
+* Object Class
+* Object Methods
+* hashCode Method
+* equals Method
+* instanceof Operator
+* getClass Method
+</details>
+
+<br/>
+
+<details close>
+<summary><b>5. Abstract Classes, Interfaces, Annotations</b></summary>
+
+* Multiple Inheritance Problem
+* Abstract Classes
+* Abstract Constructors
+* Object of an Abstract Class
+* Abstract Static Methods
+* Static Methods in Abstract Classes
+* `final` Keyword in Abstract Class
+* Multiple Inheritance using Abstract Classes
+* Interfaces
+* Variable of Interface Type
+* Separate Classes in Same Interface
+* Extending Interfaces
+* Annotations
+* Important point regarding Static Interface methods
+* Nested Interfaces
+</details>
+
+<br/>
+
+<details close>
+<summary><b>6. Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning</b></summary>
+
+* Custom ArrayList
+* Problem with Custom ArrayList
+* Custom ArrayList using Generics
+* Working with Generics
+* Using Java Wildcards
+* Comparison Objects
+* Lambda Functions
+* Exception Handling
+* Exception Handling Keywords
+* Creating Custom Exception
+* Object Cloning
+* Shallow and Deep Copy
+* Explanation of Shallow Copying
+* Explanation of Deep Copying
+</details>
+
+<br/>
+
+<details close>
+<summary><b>7. Collections Framework, Vector Class, Enums in Java</b></summary>
+
+* Collections Framework
+* Need of Collection Framework in Java
+* Understanding Collection Framework
+* Vector Class
+* Vector Synchronisation
+* Vector Code Example
+* Enums in Java
+* Enum Inheritance
+</details>
 
 ---
 
