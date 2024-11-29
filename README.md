@@ -39,7 +39,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><code>2. Packages, Static, Singleton Class, In-built Methods</code></summary>
+<summary><code>2. Packages, Static, Singleton Class, In-built Methods 📦⚡</code></summary>
 
 * Packages example
 * Java Packages
@@ -59,7 +59,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><code>3. Principles - Inheritance, Polymorphism, Encapsulation, Abstraction</code></summary>
+<summary><code>3. Principles - Inheritance, Polymorphism, Encapsulation, Abstraction 💡🔒</code></summary>
 
 * Principles of OOP
 * Inheritance
@@ -91,7 +91,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><code>4. Access Control, In-built Packages, Object Class</code></summary>
+<summary><code>4. Access Control, In-built Packages, Object Class 🔑</code></summary>
 
 * Example: private, public and protected modifiers
 * Rules for modifiers
@@ -116,7 +116,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><code>5. Abstract Classes, Interfaces, Annotations</code></summary>
+<summary><code>5. Abstract Classes, Interfaces, Annotations 📝</code></summary>
 
 * Multiple Inheritance Problem
 * Abstract Classes
@@ -138,7 +138,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><code>6. Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning</code></summary>
+<summary><code>6. Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning ⚙️</code></summary>
 
 * Custom ArrayList
 * Problem with Custom ArrayList
@@ -159,7 +159,7 @@ The repository is structured into folders representing different OOP topics for 
 
 
 <details close>
-<summary><code>7. Collections Framework, Vector Class, Enums in Java</code></summary>
+<summary><code>7. Collections Framework, Vector Class, Enums in Java 🛠️</code></summary>
 
 * Collections Framework
 * Need of Collection Framework in Java
