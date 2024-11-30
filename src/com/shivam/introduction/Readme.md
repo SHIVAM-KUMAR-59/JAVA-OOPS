@@ -94,7 +94,7 @@ Syntax:
                   }
                ```
 
-`this` Keyword --> The `this` keyword in Java is a reference variable that refers to the current instance of the class. It is primarily used to eliminate ambiguity when instance variables and parameters have the same name or to invoke other methods/constructors within the same class.
+- `this` Keyword --> The `this` keyword in Java is a reference variable that refers to the current instance of the class. It is primarily used to eliminate ambiguity when instance variables and parameters have the same name or to invoke other methods/constructors within the same class.
  - Example: 
     ```bash
    class Example {
