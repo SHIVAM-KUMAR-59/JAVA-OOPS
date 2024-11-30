@@ -12,6 +12,7 @@
     - Parameterized Constructor
     - Copy Constructor
     - `this` Keyword
+    - Constructor Overloading
 - [**Class vs Object**](#class-vs-object)
 
 ---
@@ -51,13 +52,13 @@
 
 - `new` Operator --> The new operator in Java is used to create new objects or allocate memory for objects or arrays dynamically. It plays a key role in instantiating a class.
 
-- Creating an Object 
+- ### Creating an Object 
   - To create an object in Java, you use the new keyword to instantiate a class.
   ```bash
    ClassName objectName = new ClassName(parameters);
   ```
 
-- Accessing the instance variables
+- ### Accessing the instance variables
   - The variables inside an object are called instance variables. To access the variables inside the object, we use dot `.` operator or separator.
   ```bash
   objectName.objectVariable;
@@ -113,7 +114,8 @@
                   }
                ```
 
-- `this` Keyword --> The `this` keyword in Java is a reference variable that refers to the current instance of the class. It is primarily used to eliminate ambiguity when instance variables and parameters have the same name or to invoke other methods/constructors within the same class.
+- ### `this` Keyword
+- The `this` keyword in Java is a reference variable that refers to the current instance of the class. It is primarily used to eliminate ambiguity when instance variables and parameters have the same name or to invoke other methods/constructors within the same class.
  - Example: 
     ```bash
    class Example {
@@ -130,6 +132,53 @@
       }
    }
     ```
+
+- ### Constructor Overloading
+- Constructor overloading in Java refers to the practice of defining multiple constructors in a class with different parameter lists. It allows objects of the class to be initialized in different ways, depending on the constructor used.
+
+- Key Features of Constructor Overloading:
+  - Multiple Constructors: A class can have multiple constructors, each with a unique parameter list.
+  - Overloaded Based on Parameters: Constructors are differentiated by the number, type, or order of parameters.
+  - Provides Flexibility: Allows initializing objects with different levels of detail or configurations.
+  - Code Reusability: Reduces redundancy by enabling one constructor to call another using the this keyword.
+
+- Example:
+```bash
+class Example {
+    int x;
+    String name;
+
+    // Default Constructor
+    Example() {
+        this.x = 0;
+        this.name = "Default";
+        System.out.println("Default Constructor called: x = " + x + ", name = " + name);
+    }
+
+    // Parameterized Constructor (1 parameter)
+    Example(int x) {
+        this.x = x;
+        this.name = "Default";
+        System.out.println("Constructor with 1 parameter called: x = " + x + ", name = " + name);
+    }
+
+    // Parameterized Constructor (2 parameters)
+    Example(int x, String name) {
+        this.x = x;
+        this.name = name;
+        System.out.println("Constructor with 2 parameters called: x = " + x + ", name = " + name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Example obj1 = new Example();                  // Calls Default Constructor
+        Example obj2 = new Example(10);               // Calls Constructor with 1 parameter
+        Example obj3 = new Example(20, "Shivam");     // Calls Constructor with 2 parameters
+    }
+}
+```
+
 
 # **Class vs Object**
 

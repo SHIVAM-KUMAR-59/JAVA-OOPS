@@ -39,6 +39,10 @@ public class Main {
         two.greeting(); // Will print Pihu
         two.changeName("Mauli");
         two.greeting(); // Will print Mauli
+
+        // New student created using the overloaded constructor
+        Student random = new Student(two);
+        System.out.println(random.name + " with roll number " + random.rollNo + " got " + random.marks); // Will print two's values
     }
 }
 
@@ -61,6 +65,13 @@ class Student {
     // Function to change name
     void changeName(String newName){
         this.name = newName;
+    }
+
+    // An overloaded constructor with a different parameter than others
+    Student (Student other){
+        this.name = other.name;
+        this.marks = other.marks;
+        this.rollNo = other.rollNo;
     }
 
     // Parameterized Constructor
