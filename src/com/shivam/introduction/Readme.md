@@ -65,7 +65,7 @@
     - Overloading Supported: Multiple constructors can exist in a class with different parameter lists.
 
       - Types of Constructors:
-          - 1. Default Constructor:
+          - Default Constructor:
               - A constructor with no parameters.
               - Automatically provided by Java if no constructors are explicitly defined in the class.
               ```bash
@@ -78,7 +78,7 @@
                   }
                 }
               ``` 
-          - 2. Parameterized Constructor:
+          - Parameterized Constructor:
                - A constructor that accepts arguments to initialize the fields with specific values.
                ```bash
                   class Example {
@@ -90,7 +90,7 @@
                     }
                   }
                ```
-          - 3. Copy Constructor:
+          - Copy Constructor:
                 - A constructor that creates an object by copying another object of the same class.
                ```bash
                   class Example {
