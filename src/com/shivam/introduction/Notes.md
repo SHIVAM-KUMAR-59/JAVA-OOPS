@@ -44,6 +44,73 @@ Syntax:
   ```bash
   objectName.objectVariable;
   ```
+  
+- **Constructors in Java** --> A constructor is a special method in Java used to initialize objects. It is called when an object of a class is created. Constructors set up the initial state of an object by assigning values to its fields and executing any setup logic required.
+- Features of Constructors:
+  - Same Name as Class: The name of the constructor must match the name of the class.
+  - No Return Type: Constructors do not have a return type, not even void.
+  - Automatically Called: Constructors are automatically invoked when an object is created.
+    - Overloading Supported: Multiple constructors can exist in a class with different parameter lists.
+
+      - Types of Constructors:
+          - 1. Default Constructor:
+              - A constructor with no parameters.
+              - Automatically provided by Java if no constructors are explicitly defined in the class.
+              ```bash
+                class Example {
+                  int x;
+                  // Default Constructor
+                  Example() {
+                  x = 10;
+                  System.out.println("Default Constructor called. x = " + x);
+                  }
+                }
+              ``` 
+          - 2. Parameterized Constructor:
+               - A constructor that accepts arguments to initialize the fields with specific values.
+               ```bash
+                  class Example {
+                    int x;
+                    // Parameterized Constructor
+                    Example(int value) {
+                    x = value;
+                    System.out.println("Parameterized Constructor called. x = " + x);
+                    }
+                  }
+               ```
+          - 3. Copy Constructor:
+                - A constructor that creates an object by copying another object of the same class.
+               ```bash
+                  class Example {
+                      int x;
+                      // Parameterized Constructor
+                      Example(int value) {
+                         x = value;
+                      }
+                     // Copy Constructor
+                     Example(Example obj) {
+                        x = obj.x;
+                     }
+                  }
+               ```
+
+`this` Keyword --> The `this` keyword in Java is a reference variable that refers to the current instance of the class. It is primarily used to eliminate ambiguity when instance variables and parameters have the same name or to invoke other methods/constructors within the same class.
+ - Example: 
+    ```bash
+   class Example {
+      String name;
+   
+      // Parameterized Constructor
+      Example (name){
+        this.name = name;
+      }  
+   
+      // A function that greets the user
+      void Greeting(){
+         System.out.println("Hello " + this.name); // This will print hello + name of the reference variable
+      }
+   }
+    ```
 
 # **Class vs Object**
 

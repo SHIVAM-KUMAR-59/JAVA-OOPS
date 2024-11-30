@@ -23,12 +23,22 @@ public class Main {
         //  System.out.println(Arrays.toString(students)); // Will give null because we have not initialised it yet, we have just declared it
 
         one = new Student(); // Dynamically allocated the memory at run time and returns a reference variable to it
-        System.out.println(one.name + " with roll number " + one.rollNo + " got " + one.marks); // Will print the default values
-        one.rollNo = 10;
-        one.name = "Shivam";
-        one.marks = 98;
-        System.out.println(one); // Will print a random value
-        System.out.println(one.name + " with roll number " + one.rollNo + " got " + one.marks); // Will print the assigned values
+
+        // ------- Before Constructor -------
+        // System.out.println(one.name + " with roll number " + one.rollNo + " got " + one.marks); // Will print the default values
+        // one.rollNo = 10;
+        // one.name = "Shivam";
+        // one.marks = 98;
+        // System.out.println(one); // Will print a random value
+        // System.out.println(one.name + " with roll number " + one.rollNo + " got " + one.marks); // Will print the assigned values
+
+        // ------- After Constructor --------
+        Student two = new Student(12, "Pihu", 75);
+        System.out.println(two.name + " with roll number " + two.rollNo + " got " + two.marks);
+
+        two.greeting(); // Will print Pihu
+        two.changeName("Mauli");
+        two.greeting(); // Will print Mauli
     }
 }
 
@@ -37,4 +47,26 @@ class Student {
     int rollNo;
     String name;
     float marks;
+
+    // Empty Constructor
+    Student (){
+        System.out.println("Hello");
+    }
+
+    // Function to greet
+    void greeting(){
+        System.out.println("Hello " + this.name);
+    }
+
+    // Function to change name
+    void changeName(String newName){
+        this.name = newName;
+    }
+
+    // Parameterized Constructor
+    Student (int rollNo, String name, float marks){
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
 }
