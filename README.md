@@ -29,8 +29,6 @@ The repository is structured into folders representing different OOP topics for 
 * `this` keyword
 * Constructor Overloading
 * Calling a constructor from another constructor
-* Why we don't use `new` keyword for creating primitive data types?
-* Memory Allocation of `new` keyword
 * Wrapper Classes
 * `final` keyword
 * Garbage Collection
