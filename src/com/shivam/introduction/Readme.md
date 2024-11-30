@@ -5,12 +5,7 @@
 - [**Introduction to OOP**](#introduction-to-oop)
 - [**Classes**](#classes)
 - [**Objects**](#objects)
-- [**Creating Objects**](#creating-objects)
-- [**Instance Variables**](#accessing-the-instance-variables)
 - [**Constructors**](#constructors)
-    - [Default Constructor](#1-default-constructor)
-    - [Parameterized Constructor](#2-parameterized-constructor)
-    - [Copy Constructor](#3-copy-constructor)
 - [**Class vs Object**](#class-vs-object)
 
 ---
