@@ -16,6 +16,7 @@
 - [**Class vs Object**](#class-vs-object)
 - [**Wrapper Class**](#wrapper-class)
   - 'final' Keyword
+  - Garbage Collector(GC)
 
 ---
 
@@ -41,18 +42,20 @@
           }
    }
    ```
+---
 
 - ## Objects 
 - An object is an instance of a class. It represents a real-world entity with:
   - State: The data or attributes of the object, represented by fields in the class.
   - Behavior: The actions the object can perform, defined by methods in the class.
   - Objects are the building blocks of object-oriented programming (OOP) and are used to encapsulate data and behavior together.
-- Key Characteristics of Objects
+- **Key Characteristics of Objects**:
   - Identity: A unique reference or name that distinguishes one object from another.
   - State: The values of an object's fields (attributes) at a given time.
   - Behavior: Actions or functions that the object can perform, defined by the class methods.
 
-- `new` Operator --> The new operator in Java is used to create new objects or allocate memory for objects or arrays dynamically. It plays a key role in instantiating a class.
+- ### `new` Operator
+The new operator in Java is used to create new objects or allocate memory for objects or arrays dynamically. It plays a key role in instantiating a class.
 
 - ### Creating an Object 
   - To create an object in Java, you use the new keyword to instantiate a class.
@@ -66,55 +69,57 @@
   objectName.objectVariable;
   ```
   
+---
+
 - ## Constructors
 - A constructor is a special method in Java used to initialize objects. It is called when an object of a class is created. Constructors set up the initial state of an object by assigning values to its fields and executing any setup logic required.
-- Features of Constructors:
+- **Features of Constructors**:
   - Same Name as Class: The name of the constructor must match the name of the class.
   - No Return Type: Constructors do not have a return type, not even void.
   - Automatically Called: Constructors are automatically invoked when an object is created.
     - Overloading Supported: Multiple constructors can exist in a class with different parameter lists.
 
-      - Types of Constructors:
-          - Default Constructor:
-              - A constructor with no parameters.
-              - Automatically provided by Java if no constructors are explicitly defined in the class.
-              ```bash
-                class Example {
-                  int x;
-                  // Default Constructor
-                  Example() {
-                  x = 10;
-                  System.out.println("Default Constructor called. x = " + x);
-                  }
+- **Types of Constructors**:
+    - Default Constructor:
+        - A constructor with no parameters.
+        - Automatically provided by Java if no constructors are explicitly defined in the class.
+        ```bash
+          class Example {
+            int x;
+            // Default Constructor
+            Example() {
+            x = 10;
+            System.out.println("Default Constructor called. x = " + x);
+            }
+          }
+        ``` 
+    - Parameterized Constructor:
+         - A constructor that accepts arguments to initialize the fields with specific values.
+         ```bash
+            class Example {
+              int x;
+              // Parameterized Constructor
+              Example(int value) {
+              x = value;
+              System.out.println("Parameterized Constructor called. x = " + x);
+              }
+            }
+         ```
+    - Copy Constructor:
+          - A constructor that creates an object by copying another object of the same class.
+         ```bash
+            class Example {
+                int x;
+                // Parameterized Constructor
+                Example(int value) {
+                   x = value;
                 }
-              ``` 
-          - Parameterized Constructor:
-               - A constructor that accepts arguments to initialize the fields with specific values.
-               ```bash
-                  class Example {
-                    int x;
-                    // Parameterized Constructor
-                    Example(int value) {
-                    x = value;
-                    System.out.println("Parameterized Constructor called. x = " + x);
-                    }
-                  }
-               ```
-          - Copy Constructor:
-                - A constructor that creates an object by copying another object of the same class.
-               ```bash
-                  class Example {
-                      int x;
-                      // Parameterized Constructor
-                      Example(int value) {
-                         x = value;
-                      }
-                     // Copy Constructor
-                     Example(Example obj) {
-                        x = obj.x;
-                     }
-                  }
-               ```
+               // Copy Constructor
+               Example(Example obj) {
+                  x = obj.x;
+               }
+            }
+         ```
 
 - ### `this` Keyword
 - The `this` keyword in Java is a reference variable that refers to the current instance of the class. It is primarily used to eliminate ambiguity when instance variables and parameters have the same name or to invoke other methods/constructors within the same class.
@@ -135,10 +140,12 @@
    }
     ```
 
+---
+
 - ### Constructor Overloading
 - Constructor overloading in Java refers to the practice of defining multiple constructors in a class with different parameter lists. It allows objects of the class to be initialized in different ways, depending on the constructor used.
 
-- Key Features of Constructor Overloading:
+- **Key Features of Constructor Overloading**:
   - Multiple Constructors: A class can have multiple constructors, each with a unique parameter list.
   - Overloaded Based on Parameters: Constructors are differentiated by the number, type, or order of parameters.
   - Provides Flexibility: Allows initializing objects with different levels of detail or configurations.
@@ -181,6 +188,7 @@ public class Main {
 }
 ```
 
+---
 
 ## **Class vs Object**
 
@@ -196,6 +204,8 @@ public class Main {
 | **Lifetime**           | Exists until the program is running.                                                        | Exists as long as there is a reference pointing to it, otherwise garbage collected. |
 | **Access**             | Cannot directly access fields or methods; used to define them.                              | Accesses fields and methods defined by the class using the dot operator (`.`).      |
 | **Real-World Analogy** | A **blueprint** for building a car.                                                         | A **specific car** built using the blueprint.                                       |
+
+---
 
 ## **Wrapper Class**
 - Wrapper classes in Java provide a way to use primitive data types as objects. Each primitive type (e.g., int, double, char) has a corresponding wrapper class in the java.lang package.
@@ -214,7 +224,7 @@ public class Main {
 | `boolean`            | `Boolean`           |
 
 ---
-- Key Features of Wrapper Classes
+- **Key Features of Wrapper Classes**:
   - Object Representation: Converts primitive data types into objects.
   - Utility Methods: Provides methods for converting between primitives, strings, and other data types.
   - Immutable: Wrapper class objects are immutable, meaning their state cannot be changed after creation.
@@ -246,3 +256,64 @@ public class WrapperExample {
 ```bash
   final DataType variableName = value;
 ```
+---
+
+- ### Garbage Collector
+- The Garbage Collector (GC) in Java is responsible for managing memory automatically. It helps reclaim memory by deleting objects that are no longer reachable or referenced in a program, freeing up space for new objects. This process ensures efficient memory management and reduces the risk of memory leaks.
+
+- **Key Features of Garbage Collector**:
+  - Automatic Memory Management:
+    - Java programmers do not need to explicitly free memory (as in languages like C/C++).
+    - The Garbage Collector handles memory deallocation for unused objects.
+  - Heap Memory Management:
+    - Objects are created in the heap memory, which is managed by the GC.
+    - GC removes objects that are no longer referenced.
+  - Finalization:
+    - Before an object is removed, its finalize() method is called, if overridden. This can be used to release resources (e.g., closing files).
+    - Note: The use of finalize() is discouraged in modern Java due to its unpredictable behavior and better alternatives (e.g., try-with-resources).
+  
+- **How the Garbage Collector Works**:
+  - The Java GC works based on object reachability:
+    - Reachable Objects: Objects that are still accessible through references in the application.
+    - Unreachable Objects: Objects that no longer have any reference in the code and are eligible for garbage collection.
+
+- Example:
+```java
+public class GarbageCollectorExample {
+    public static void main(String[] args) {
+        // Creating multiple objects in a loop
+        for (int i = 0; i < 1000; i++) {
+            A obj = new A("Object " + i); // Each iteration creates a new object
+        }
+
+        // Requesting garbage collection explicitly
+        System.gc();
+
+        System.out.println("Garbage collection requested.");
+    }
+
+    static class A {
+        String name;
+
+        public A(String name) {
+            this.name = name;
+            System.out.println("Created: " + name);
+        }
+
+        @Override
+        protected void finalize() throws Throwable {
+            System.out.println("Finalized: " + name);
+        }
+    }
+}
+```
+
+- **Limitations of Garbage Collector**:
+  - Unpredictability:
+    - The timing of garbage collection is not guaranteed.
+    - The GC runs in the background and prioritizes system performance.
+  - Performance Overhead:
+    - Frequent garbage collection can pause application threads (GC pause), affecting performance, especially in real-time systems.
+  - No Control Over Execution:
+    - Developers cannot control when the GC will reclaim memory; they can only suggest it using System.gc() or Runtime.getRuntime().gc().
+
