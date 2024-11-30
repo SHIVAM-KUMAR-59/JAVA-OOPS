@@ -2,7 +2,6 @@
 
 ## **Contents**
 
-- [**Introduction to OOP**](#introduction-to-oop)
 - [**Classes**](#classes)
 - [**Objects**](#objects)
 - [**Constructors**](#constructors)
