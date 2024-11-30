@@ -43,6 +43,9 @@ public class Main {
         // New student created using the overloaded constructor
         Student random = new Student(two);
         System.out.println(random.name + " with roll number " + random.rollNo + " got " + random.marks); // Will print two's values
+
+        Student random2 = new Student();
+        System.out.println(random2.name + " with roll number " + random2.rollNo + " got " + random2.marks); // Will print 13, Default Person and 100
     }
 }
 
@@ -53,9 +56,9 @@ class Student {
     float marks;
 
     // Empty Constructor
-    Student (){
-        System.out.println("Hello");
-    }
+    // Student (){
+    //    System.out.println("Hello");
+    // }
 
     // Function to greet
     void greeting(){
@@ -72,6 +75,12 @@ class Student {
         this.name = other.name;
         this.marks = other.marks;
         this.rollNo = other.rollNo;
+    }
+
+    // An empty constructor calling a constructor from another constructor
+    Student (){
+        // internally its working like: new Student()
+        this (13, "Default Person", 100);
     }
 
     // Parameterized Constructor
