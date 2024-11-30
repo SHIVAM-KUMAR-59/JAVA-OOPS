@@ -1,10 +1,11 @@
 ## OOP-1 Introduction and Basics 
 
-- **Classes** --> A class in Java is a blueprint for creating objects. It defines the structure and behavior that the objects created from the class will have. This includes:
-            - Fields (Attributes): Variables that hold the data or state of the objects.
-            - Methods: Functions that define the behavior of the objects.
-            - Constructors: Special methods used to initialize objects.
-Syntax:
+- ## Classes
+- A class in Java is a blueprint for creating objects. It defines the structure and behavior that the objects created from the class will have. This includes:
+  - Fields (Attributes): Variables that hold the data or state of the objects.
+  - Methods: Functions that define the behavior of the objects.
+  - Constructors: Special methods used to initialize objects.
+  Syntax:
 ```bash
    class ClassName {
           // Fields (Attributes)
@@ -22,10 +23,11 @@ Syntax:
    }
    ```
 
-- **Objects** --> An object is an instance of a class. It represents a real-world entity with:
-            - State: The data or attributes of the object, represented by fields in the class.
-            - Behavior: The actions the object can perform, defined by methods in the class.
-            - Objects are the building blocks of object-oriented programming (OOP) and are used to encapsulate data and behavior together.
+- ## Objects 
+- An object is an instance of a class. It represents a real-world entity with:
+  - State: The data or attributes of the object, represented by fields in the class.
+  - Behavior: The actions the object can perform, defined by methods in the class.
+  - Objects are the building blocks of object-oriented programming (OOP) and are used to encapsulate data and behavior together.
 - Key Characteristics of Objects
   - Identity: A unique reference or name that distinguishes one object from another.
   - State: The values of an object's fields (attributes) at a given time.
@@ -45,7 +47,8 @@ Syntax:
   objectName.objectVariable;
   ```
   
-- **Constructors in Java** --> A constructor is a special method in Java used to initialize objects. It is called when an object of a class is created. Constructors set up the initial state of an object by assigning values to its fields and executing any setup logic required.
+- ## Constructors
+- A constructor is a special method in Java used to initialize objects. It is called when an object of a class is created. Constructors set up the initial state of an object by assigning values to its fields and executing any setup logic required.
 - Features of Constructors:
   - Same Name as Class: The name of the constructor must match the name of the class.
   - No Return Type: Constructors do not have a return type, not even void.
