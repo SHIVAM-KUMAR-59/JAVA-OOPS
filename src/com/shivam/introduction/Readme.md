@@ -14,6 +14,7 @@
     - `this` Keyword
     - Constructor Overloading
 - [**Class vs Object**](#class-vs-object)
+- [**Wrapper Class**](#wrapper-class)
 
 ---
 
@@ -180,7 +181,7 @@ public class Main {
 ```
 
 
-# **Class vs Object**
+## **Class vs Object**
 
 | Feature                | **Class**                                                                                   | **Object**                                                                          |
 |------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -194,3 +195,53 @@ public class Main {
 | **Lifetime**           | Exists until the program is running.                                                        | Exists as long as there is a reference pointing to it, otherwise garbage collected. |
 | **Access**             | Cannot directly access fields or methods; used to define them.                              | Accesses fields and methods defined by the class using the dot operator (`.`).      |
 | **Real-World Analogy** | A **blueprint** for building a car.                                                         | A **specific car** built using the blueprint.                                       |
+
+## **Wrapper Class**
+- Wrapper classes in Java provide a way to use primitive data types as objects. Each primitive type (e.g., int, double, char) has a corresponding wrapper class in the java.lang package.
+
+- Primitive Types and Their Wrapper Classes
+
+| **Primitive Type**   | **Wrapper Class**   |
+|----------------------|---------------------|
+| `byte`               | `Byte`              |
+| `short`              | `Short`             |
+| `int`                | `Integer`           |
+| `long`               | `Long`              |
+| `float`              | `Float`             |
+| `double`             | `Double`            |
+| `char`               | `Character`         |
+| `boolean`            | `Boolean`           |
+
+---
+- Key Features of Wrapper Classes
+  - Object Representation: Converts primitive data types into objects.
+  - Utility Methods: Provides methods for converting between primitives, strings, and other data types.
+  - Immutable: Wrapper class objects are immutable, meaning their state cannot be changed after creation.
+  - Autoboxing and Unboxing:
+    - Autoboxing: Automatic conversion of a primitive type to its corresponding wrapper class.
+    - Unboxing: Automatic conversion of a wrapper class object to its corresponding primitive type.
+- Example:
+```bash
+public class WrapperExample {
+    public static void main(String[] args) {
+        // Autoboxing: Primitive to Wrapper
+        int a = 10;
+        Integer wrapperA = a;  // Integer.valueOf(a)
+        System.out.println("Autoboxing: " + wrapperA);
+
+        // Unboxing: Wrapper to Primitive
+        Integer wrapperB = 20;
+        int b = wrapperB;  // wrapperB.intValue()
+        System.out.println("Unboxing: " + b);
+    }
+}
+```
+
+- ###  `final` Keyword
+- The `final` keyword in Java is used to define constants, prevent inheritance, and restrict modifications to variables, methods, or classes. It is an important part of the language to enforce immutability, code security, and clarity.
+- When a variable is declared as `final`, its value cannot be changed once it is initialized. It becomes a constant after initialization.
+
+- Syntax:
+```bash
+  final DataType variableName = value;
+```
