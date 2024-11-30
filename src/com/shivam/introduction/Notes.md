@@ -1,4 +1,4 @@
-## ------------------------------------ OOP-1 Introduction and Basics -------------------------------------
+## OOP-1 Introduction and Basics 
 
 Classes --> A class in Java is a blueprint for creating objects. It defines the structure and behavior that the objects created from the class will have. This includes:
             - Fields (Attributes): Variables that hold the data or state of the objects.
