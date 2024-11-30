@@ -11,7 +11,6 @@
     - [Default Constructor](#1-default-constructor)
     - [Parameterized Constructor](#2-parameterized-constructor)
     - [Copy Constructor](#3-copy-constructor)
-- [**this Keyword**](#this-keyword)
 - [**Class vs Object**](#class-vs-object)
 
 ---
