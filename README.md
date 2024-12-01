@@ -39,7 +39,6 @@ The repository is structured into folders representing different OOP topics for 
 <details close>
 <summary><code>2. Packages, Static, Singleton Class, In-built Methods 📦⚡</code></summary>
 
-* Packages example
 * Java Packages
 * `import` statement
 * Static elements example
@@ -49,8 +48,6 @@ The repository is structured into folders representing different OOP topics for 
 * Static member inside a non-static
 * `this` keyword inside static
 * Initialisation of static variables
-* Inner Classes
-* Internal working of some statements
 * Singleton Class
 </details>
 
