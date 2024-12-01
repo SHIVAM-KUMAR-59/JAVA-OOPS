@@ -35,6 +35,8 @@
   - Lazy Initialization
 
 - [Singleton Class](#singleton-class)
+  - Characteristics of a Singleton Class
+  - How the Singleton Pattern works
 ---
 
 - ## Packages
