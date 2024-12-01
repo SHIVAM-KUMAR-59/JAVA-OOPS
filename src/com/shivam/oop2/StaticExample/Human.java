@@ -10,6 +10,14 @@ public class Human {
     // Static variable (shared among all objects of the class)
     static long population; // Total population of humans, shared across all instances
 
+    static void message(){
+        System.out.println("Hello World");
+        /*
+        * We cannot use 'this' keyword in static methods because it represents an object but static is not dependent on object
+        */
+        // System.out.println(this.age); Therefore this is wrong and will give errors.
+    }
+
     // Constructor to initialize a new Human object
     public Human(int age, String name, int salary, boolean married) {
         this.age = age;          // Assigning age to the instance variable
@@ -19,5 +27,7 @@ public class Human {
 
         // Incrementing the static population variable for each new Human object created
         Human.population += 1;
+
+        Human.message();
     }
 }
