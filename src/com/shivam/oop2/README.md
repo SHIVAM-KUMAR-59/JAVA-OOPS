@@ -9,7 +9,7 @@
   - How to Create a Package
   - Using a Class from a Package
 
-- Static Keyword
+- [Static Keyword](#static-keyword)
   - Uses of static Keyword
   - `this` Keyword in Static Context
 
