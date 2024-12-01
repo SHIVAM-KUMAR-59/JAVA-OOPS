@@ -1,6 +1,4 @@
-package com.shivam.introduction;
-
-import java.util.Arrays;
+package com.shivam.oop1;
 
 public class Main {
     public static void main(String[] args) {
