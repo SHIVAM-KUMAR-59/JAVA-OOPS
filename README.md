@@ -58,7 +58,6 @@ The repository is structured into folders representing different OOP topics for 
 
 * Principles of OOP
 * Inheritance
-* Example: Box
 * `private` keyword
 * `super` keyword
 * Single Inheritance
@@ -66,21 +65,17 @@ The repository is structured into folders representing different OOP topics for 
 * Hierarchical Inheritance
 * Hybrid Inheritance
 * Polymorphism
-* Example: Shapes
 * Types of Polymorphism
 * Static Polymorphism
 * Overloading
 * Dynamic Polymorphism
 * Overriding
 * How Overriding Works?
-* How Java determines which method to run?
 * `final` keyword
 * Can we override static methods?
 * Encapsulation
 * Abstraction
 * Encapsulation vs Abstraction
-* Example
-* Data Hiding
 </details>
 
 
