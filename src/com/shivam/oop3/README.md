@@ -234,3 +234,171 @@ public class Main {
     }
 }
 ```
+
+--- 
+
+## Encapsulation
+It is the process of wrapping data (fields/variables) and code (methods) into a single unit (class) and restricting direct access to some of the object's components to ensure controlled manipulation.
+
+- ### Key Points of Encapsulation:
+     - **Data Hiding**: Encapsulation hides the internal state of the object from the outside world. It provides controlled access via getter and setter methods.
+     - **Improved Security**: By restricting access, encapsulation prevents unauthorized or accidental modifications to an object's data.
+     - **Modularity**: Encapsulation allows you to change the implementation details of a class without affecting other parts of the code.
+     - **Ease of Maintenance**: Encapsulation makes it easier to debug and maintain the code.
+- ### Steps to Achieve Encapsulation:
+     - **Declare Fields as private**: This prevents direct access to the fields from outside the class.
+     - **Provide public Getter and Setter Methods**: 
+         - Use getter methods to access the value of private fields.
+         - Use setter methods to modify the value of private fields.
+- ### Example
+```java
+package com.shivam.oop3.encapsulation;
+
+public class BankAccount {
+    // Private fields
+    private String accountHolderName;
+    private double balance;
+
+    // Constructor
+    public BankAccount(String accountHolderName, double initialBalance) {
+        this.accountHolderName = accountHolderName;
+        this.balance = initialBalance;
+    }
+
+    // Getter for accountHolderName
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    // Setter for accountHolderName
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
+
+    // Getter for balance
+    public double getBalance() {
+        return balance;
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Successfully deposited: " + amount);
+        } else {
+            System.out.println("Deposit amount must be greater than zero.");
+        }
+    }
+
+    // Method to withdraw money
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Successfully withdrew: " + amount);
+        } else {
+            System.out.println("Invalid withdrawal amount.");
+        }
+    }
+}
+```
+
+### Main Class
+```java
+package com.shivam.oop3.encapsulation;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new BankAccount object
+        BankAccount account = new BankAccount("Shivam Kumar", 1000);
+
+        // Access and modify fields using getter and setter
+        System.out.println("Account Holder: " + account.getAccountHolderName());
+        System.out.println("Initial Balance: " + account.getBalance());
+
+        // Deposit money
+        account.deposit(500);
+        System.out.println("Balance after deposit: " + account.getBalance());
+
+        // Withdraw money
+        account.withdraw(300);
+        System.out.println("Balance after withdrawal: " + account.getBalance());
+
+        // Attempt to withdraw an invalid amount
+        account.withdraw(2000); // This should print an error message
+    }
+}
+```
+
+---
+
+## Abstraction
+Abstraction is one of the key principles of Object-Oriented Programming (OOP). It focuses on exposing only essential details and hiding the implementation specifics. By doing so, abstraction simplifies the complexity of a system by allowing users to interact with an object at a higher, more conceptual level.
+
+- ### Key Concepts of Abstraction:
+    - **Hiding Implementation**: Users of a class or method only see what it does, not how it does it.
+    - **Improves Code Clarity**: By exposing only necessary features, abstraction reduces code complexity.
+    - **Achieved Through**:
+        - Abstract Classes 
+        - Interfaces
+- ### Example
+```java
+package com.shivam.oop3.abstraction;
+
+// Abstract Class for Bank
+abstract class Bank {
+    abstract void loanInterestRate();
+
+    public void displayBankName() {
+        System.out.println("Welcome to Shivam Bank!");
+    }
+}
+
+// Subclass 1
+class SBI extends Bank {
+    @Override
+    void loanInterestRate() {
+        System.out.println("SBI Loan Interest Rate: 7.5%");
+    }
+}
+
+// Subclass 2
+class HDFC extends Bank {
+    @Override
+    void loanInterestRate() {
+        System.out.println("HDFC Loan Interest Rate: 8.2%");
+    }
+}
+
+// Main Class
+public class BankMain {
+    public static void main(String[] args) {
+        Bank sbi = new SBI();
+        Bank hdfc = new HDFC();
+
+        sbi.displayBankName();
+        sbi.loanInterestRate();   // Output: SBI Loan Interest Rate: 7.5%
+
+        hdfc.displayBankName();
+        hdfc.loanInterestRate();  // Output: HDFC Loan Interest Rate: 8.2%
+    }
+}
+```
+
+---
+
+## Encapsulation VS Abstraction
+
+| **Aspect**                  | **Abstraction**                                                                                                    | **Encapsulation**                                                                |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **Definition**              | Hides the implementation details while showing only the functionality.                                             | Wraps data (variables) and methods into a single unit (class).                   |
+| **Focus**                   | Focuses on *what* the object does.                                                                                 | Focuses on *how* the object is implemented.                                      |
+| **Purpose**                 | To hide complex implementation from the user.                                                                      | To protect data and ensure controlled access through methods.                    |
+| **Achieved By**             | Using `abstract` classes and `interfaces`.                                                                         | Using `private`, `protected`, and `public` access modifiers.                     |
+| **Security**                | Provides partial security by hiding implementation details.                                                        | Provides full security by restricting direct access to data.                     |
+| **Flexibility**             | Allows flexibility by enabling different implementations for the same functionality.                               | Restricts direct access but allows controlled changes via getter/setter methods. |
+| **Real-World Example**      | **ATM Machine**: User knows how to withdraw cash (functionality) but not how it works internally (implementation). | **Capsule**: Medicine encapsulated within a protective outer shell.              |
+| **Use Case**                | When defining a contract or exposing essential functionality to users.                                             | When securing sensitive data or enforcing specific constraints.                  |
+| **Code Example**            | Abstract class or interface defining behaviors without implementation.                                             | A class with private fields and public getters/setters.                          |
+
+
+
