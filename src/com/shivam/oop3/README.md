@@ -2,6 +2,29 @@
 
 ---
 
+## Table of Contents
+1. [Inheritance](#inheritance)
+    - Superclass and Subclass
+    - `extends` Keyword
+    - `super` Keyword
+    - Access Modifiers and Inheritance
+    - Types of Inheritance
+    - Method Overriding
+2. [Polymorphism](#polymorphism)
+    - Compile-Time Polymorphism (Method Overloading)
+    - Run-Time Polymorphism (Method Overriding)
+    - Key Features of Polymorphism
+3. [Encapsulation](#encapsulation)
+    - Key Points of Encapsulation
+    - Steps to Achieve Encapsulation
+    - Example: Bank Account System
+4. [Abstraction](#abstraction)
+    - Key Concepts of Abstraction
+    - Achieved Through Abstract Classes and Interfaces
+    - Example: Bank Loan Interest System
+5. [Abstraction VS Encapsulation](#encapsulation-vs-abstraction)
+---
+
 ## Inheritance
 Inheritance is a fundamental concept in object-oriented programming (OOP) that allows one class (the child or subclass) to inherit fields and methods from another class (the parent or superclass). It promotes code reusability and establishes a hierarchical relationship between classes.
 ### Key Concepts
