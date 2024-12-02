@@ -1,4 +1,4 @@
-# OOP-2 Packages, Static, Singleton Class, In-built Methods
+# OOP-2 | Packages, Static, Singleton Class, In-built Methods
 
 ---
 ## Table of Contents

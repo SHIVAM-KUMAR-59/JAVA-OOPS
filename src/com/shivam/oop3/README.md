@@ -1,4 +1,4 @@
-# OOP-3 Principles - Inheritance, Polymorphism, Encapsulation, Abstraction
+# OOP-3 | Principles - Inheritance, Polymorphism, Encapsulation, Abstraction
 
 ---
 
