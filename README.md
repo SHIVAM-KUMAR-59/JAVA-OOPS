@@ -86,21 +86,16 @@ The repository is structured into folders representing different OOP topics for 
 * Example: private, public and protected modifiers
 * Rules for modifiers
 * When to use which modifier?
-* Important point for protected modifier
-* More about Packages
 * In-built Packages
 * `lang` package
 * `io` package
 * `util` package
 * `applet` package
-* `awt` package
 * `net` package
 * Object Class
 * Object Methods
 * hashCode Method
 * equals Method
-* instanceof Operator
-* getClass Method
 </details>
 
 
