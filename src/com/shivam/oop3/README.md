@@ -9,7 +9,6 @@
     - `super` Keyword
     - Access Modifiers and Inheritance
     - Types of Inheritance
-    - Method Overriding
 2. [Polymorphism](#polymorphism)
     - Compile-Time Polymorphism (Method Overloading)
     - Run-Time Polymorphism (Method Overriding)
@@ -130,30 +129,6 @@ public class Main {
         dog.eat();  // Inherited from Animal
         dog.walk(); // Inherited from Mammal
         dog.bark(); // Method in Dog
-    }
-}
-```
-- ### Method Overriding
-  When a subclass provides a specific implementation of a method already defined in its superclass.
-- ### Example
-```java
-class Parent {
-    void message() {
-        System.out.println("Message from parent class.");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void message() {
-        System.out.println("Message from child class.");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent obj = new Child(); // Dynamic Method Dispatch
-        obj.message(); // Calls the overridden method in Child
     }
 }
 ```
