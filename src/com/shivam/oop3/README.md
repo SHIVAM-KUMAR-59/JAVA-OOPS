@@ -136,3 +136,92 @@ public class Main {
 ```
 
 ---
+
+## Polymorphism
+Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows objects to take many forms. It enables a single method or interface to work with different types of objects, promoting flexibility and reusability in code.
+
+- ### Types of Polymorphism in Java
+     - **Compile-Time Polymorphism (Method Overloading)**:
+       - Achieved using method overloading.
+       - The compiler determines which method to call based on the method signature (method name + parameters).
+       - **Example**
+       ```java
+            class MathUtils {
+           // Overloaded add method
+           int add(int a, int b) {
+               return a + b;
+           }
+       
+           double add(double a, double b) {
+               return a + b;
+           }
+       }
+       ```
+  
+     - **Run-Time Polymorphism (Method Overriding)**:
+       - Achieved using method overriding. 
+       - The method to call is determined at runtime based on the object's actual type.
+       - **Example**:
+        ```java
+        class Animal {
+          void sound() {
+            System.out.println("Animal makes a sound");
+          }
+        }
+        
+        class Dog extends Animal {
+          @Override
+          void sound() {
+            System.out.println("Dog barks");
+          }
+        }
+        
+        public class Main {
+          public static void main(String[] args) {
+            Animal myAnimal = new Dog(); // Polymorphic reference
+            myAnimal.sound(); // Output: Dog barks
+          }
+        }
+        
+        ```
+
+- ### Key Features of Polymorphism
+  - **Dynamic Binding**: In runtime polymorphism, method calls are resolved during execution.
+  - **Code Reusability**: A single interface can be reused for multiple classes.
+  - **Extensibility**: New implementations can be added without altering existing code.
+  - **Flexibility**: Enables creating flexible and scalable systems.
+
+- ### Example
+```java
+class Shape {
+    void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+class Rectangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape myShape;
+
+        myShape = new Circle();
+        myShape.draw(); // Output: Drawing a circle
+
+        myShape = new Rectangle();
+        myShape.draw(); // Output: Drawing a rectangle
+    }
+}
+```
