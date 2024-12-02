@@ -10,6 +10,7 @@ Inheritance is a fundamental concept in object-oriented programming (OOP) that a
         - **Subclass (Child Class)**: The class that inherits from the superclass and can add its own fields and methods.
    - **`extends` Keyword**: Used to establish an inheritance relationship.
    - **`super` Keyword**: The super keyword in Java is a reference variable used to refer to the immediate parent class of the current object. It provides a way for subclasses to access fields, methods, and constructors of their superclass.
+   - **Note**: It is the type of reference variable and not the type of object that determines what members can be accessed.
 ### Access Modifiers and Inheritance:
    - `public`: Accessible everywhere.
    - `protected`: Accessible within the same package and subclasses.
@@ -56,6 +57,7 @@ public class Main {
     - **Single Inheritance**: A subclass inherits from one superclass.
     - **Multilevel Inheritance**: A subclass inherits from a superclass, and another class inherits from that subclass.
     - **Hierarchical Inheritance**: Multiple subclasses inherit from a single superclass.
+    - **Multiple Inheritance**: Not supported in Java.
     - **Hybrid Inheritance**: A combination of two or more types (not supported directly in Java due to the lack of multiple inheritance through classes).
 - ### Example Single Inheritance
 ```java
@@ -132,3 +134,5 @@ public class Main {
     }
 }
 ```
+
+---

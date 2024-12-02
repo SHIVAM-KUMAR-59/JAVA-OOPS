@@ -1,7 +1,8 @@
 package com.shivam.oop3.inheritance;
 
 public class Box {
-    double length, height, width; // Dimensions of the box
+    private double length;
+    double height, width; // Dimensions of the box
 
     // Default constructor: Creates a box with default dimensions (-1 for all sides)
     Box() {
