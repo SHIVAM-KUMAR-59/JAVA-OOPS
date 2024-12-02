@@ -161,6 +161,15 @@ Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows 
      - **Run-Time Polymorphism (Method Overriding)**:
        - Achieved using method overriding. 
        - The method to call is determined at runtime based on the object's actual type.
+       - **How Overriding Works**:
+          - ```java
+            Parent obj = new Child();
+            /*
+            Here, which method will be called depends on the Child(), this is known as Upcasting
+            */
+            ```
+       - **`final` Keyword**: A method declared as final in a parent class cannot be overridden in any subclass. This ensures that the method's behavior remains consistent and cannot be altered by any subclass.
+       - `static` methods in Java cannot be overridden. They are bound to the class, not the instance. Therefore, the concept of overriding, which applies to instance methods that are dynamically dispatched at runtime, does not apply to static methods.
        - **Example**:
         ```java
         class Animal {
