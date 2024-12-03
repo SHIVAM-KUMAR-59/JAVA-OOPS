@@ -90,4 +90,67 @@ This is a shape.
 
 ---
 
+## Interfaces
+ - An interface in Java is a blueprint for a class that contains abstract methods and static/final fields. It specifies the behavior a class must implement but does not provide any method implementation (until Java 8+).
+ - ### Key Features of Interfaces:
+     - **Pure Abstraction**: 
+        - Interfaces allow 100% abstraction (before Java 8). 
+        - All methods are implicitly `public` and `abstract`.
+     - **Default and Static Methods (since Java 8)**:
+        - Default methods can have a method body and can be overridden by implementing classes. 
+        - Static methods can be accessed using the interface name and are not inherited.
+     - **Fields**:
+        - All fields are implicitly `public`, `static`, and `final`. 
+     - **Multiple Inheritance**:
+        - A class can implement multiple interfaces, overcoming the limitation of single inheritance in classes.
+     - **Functional Interfaces (Java 8+)**:
+        - Interfaces with a single abstract method can be implemented using lambda expressions (e.g., `Runnable`, `Comparator
+ - ### Define the Interface
+```java
+package com.shivam.oop6.interfaces;
+
+public interface Animal {
+    // Abstract methods (implicitly public and abstract)
+    void eat();
+    void sleep();
+}
+ ```
+ - ### Implement the Interface
+```java
+package com.shivam.oop6.interfaces;
+
+public class Dog implements Animal {
+    @Override
+    public void eat() {
+        System.out.println("Dog is eating.");
+    }
+   
+    @Override
+    public void sleep() {
+        System.out.println("Dog is sleeping.");
+    }
+}
+```
+ - ### Usage in Main
+```java
+package com.shivam.oop6.interfaces;
+
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        dog.eat();
+        dog.sleep();
+    }
+}
+```
+
+---
+
+| Feature          | Abstract Class                              | Interface                                      |
+|------------------|---------------------------------------------|------------------------------------------------| 
+| Inheritance      | Can extend one class.                       | Can implement multiple interfaces.             |
+| Methods          | Can have abstract and concrete methods.     | Before Java 8: only abstract methods.          |
+| Fields           | Can have instance variables.                | Fields are `public`, `static`, `final`.        |
+| Access Modifiers | Supports all modifiers.                     | Methods are `public` by default.               |
+| Use Case         | When sharing implementation among classes.  | For defining a contract for unrelated classes. |      
 
