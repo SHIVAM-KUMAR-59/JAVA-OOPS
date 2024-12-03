@@ -210,7 +210,6 @@ public class Main {
    ```
     - 3. **Accessing the Annotation at Runtime (Reflection)**: If you want to access annotations at runtime, you can use reflection.
     ```java
-    Copy code
     package com.shivam.oop5.annotations;
 
     import java.lang.annotation.Annotation;
