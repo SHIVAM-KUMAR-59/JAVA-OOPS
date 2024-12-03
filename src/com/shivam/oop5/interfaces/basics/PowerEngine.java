@@ -1,4 +1,4 @@
-package com.shivam.oop5.interfaces;
+package com.shivam.oop5.interfaces.basics;
 
 // The PowerEngine class implements the Engine interface
 public class PowerEngine implements Engine {

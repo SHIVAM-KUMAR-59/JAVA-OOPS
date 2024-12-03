@@ -1,6 +1,6 @@
-package com.shivam.oop5.interfaces;
+package com.shivam.oop5.interfaces.basics;
 
-public class Car implements Engine, Brake, Media{
+public class Car implements Engine, Brake, Media {
 
     int a = 30;
 

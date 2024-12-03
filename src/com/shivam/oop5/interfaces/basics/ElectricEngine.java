@@ -1,4 +1,4 @@
-package com.shivam.oop5.interfaces;
+package com.shivam.oop5.interfaces.basics;
 
 // The ElectricEngine class implements the Engine interface
 public class ElectricEngine implements Engine {

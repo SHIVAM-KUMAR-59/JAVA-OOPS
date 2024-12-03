@@ -1,4 +1,4 @@
-package com.shivam.oop5.interfaces;
+package com.shivam.oop5.interfaces.basics;
 
 public class Main {
     public static void main(String[] args) {

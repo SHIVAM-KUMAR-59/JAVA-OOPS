@@ -1,4 +1,4 @@
-package com.shivam.oop5.interfaces;
+package com.shivam.oop5.interfaces.basics;
 
 // The OptimizedCar class demonstrates dependency injection and composition
 public class OptimizedCar {
