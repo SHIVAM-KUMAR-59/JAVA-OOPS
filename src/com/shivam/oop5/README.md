@@ -143,6 +143,22 @@ public class Main {
     }
 }
 ```
+ 
+ - ### Variable of Interface type:
+   In Java, a variable of an interface type can hold references to objects of any class that implements the interface. This feature allows you to use interfaces to define a common type for a set of classes, enabling polymorphism.
+
+   - **Key Points about Interface-Type Variables**:
+      - **Declaration**: A variable of interface type is declared just like any other variable.
+      - Example:
+      - ```java
+        InterfaceName varName;
+        ```
+      - **Instantiation**: An interface cannot be instantiated directly. The variable can hold references to objects of any class that implements the interface.
+      - Example:
+      ```java
+      InterfaceName varName = new ImplementingClass();
+     ```
+     - **Polymorphism**: Interface-type variables are useful for achieving polymorphism, where the actual object can be of any class implementing the interface.
 
 ---
 

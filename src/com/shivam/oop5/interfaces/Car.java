@@ -1,6 +1,9 @@
 package com.shivam.oop5.interfaces;
 
-public class Car implements Engine, Brake{
+public class Car implements Engine, Brake, Media{
+
+    int a = 30;
+
     @Override
     public void brake() {
         System.out.println("Brake function");
