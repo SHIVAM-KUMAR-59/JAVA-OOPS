@@ -12,5 +12,12 @@ public class Main {
         Daughter daughter = new Daughter(28);
         daughter.career();
         daughter.partner();
+
+        Parent.Greeting();
+
+        Parent child = new Son(25); // This is allowed
+        child.normal();
+        child.partner();
+        child.career();
     }
 }
