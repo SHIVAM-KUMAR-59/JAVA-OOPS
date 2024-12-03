@@ -2,6 +2,20 @@
 
 ---
 
+## Table of Contents
+1. [Abstract Classes](#abstract-classes)
+   - When to Use Abstract Classes
+   - Key Characteristics of Abstract Classes
+2. [Interfaces](#interfaces)
+   - Key Features of Interfaces
+   - Variable of Interface type
+3. [Difference Between Abstract Classes and Interfaces](#difference-between-abstract-classes-and-interfaces)
+4. [Annotations](#annotations)
+   - Types of Annotations in Java
+   - Creating and Using Custom Annotations
+
+---
+
 ## Abstract Classes
  - An abstract class in Java is a class that cannot be instantiated and is designed to be extended by subclasses. It can have both abstract methods (without a body) and concrete methods (with a body). Abstract classes are used when a common base class is needed for multiple subclasses, but the base class itself should not be instantiated.
  - ### When to Use Abstract Classes:

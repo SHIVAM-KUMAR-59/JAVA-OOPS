@@ -1,6 +1,6 @@
 # OOP-1 | Introduction and Basics
 
-## **Contents**
+## **Table of Contents**
 
 - [**Classes**](#classes)
 - [**Objects**](#objects)
