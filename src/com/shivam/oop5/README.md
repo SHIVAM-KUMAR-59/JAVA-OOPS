@@ -155,12 +155,14 @@ public class Main {
         ```
       - **Instantiation**: An interface cannot be instantiated directly. The variable can hold references to objects of any class that implements the interface.
       - Example:
-      ```java
-      InterfaceName varName = new ImplementingClass();
-     ```
+      - ```java
+        InterfaceName varName = new ImplementingClass();
+        ```
      - **Polymorphism**: Interface-type variables are useful for achieving polymorphism, where the actual object can be of any class implementing the interface.
 
 ---
+
+## Difference Between Abstract Classes and Interfaces
 
 | Feature          | Abstract Class                              | Interface                                      |
 |------------------|---------------------------------------------|------------------------------------------------| 
@@ -168,5 +170,71 @@ public class Main {
 | Methods          | Can have abstract and concrete methods.     | Before Java 8: only abstract methods.          |
 | Fields           | Can have instance variables.                | Fields are `public`, `static`, `final`.        |
 | Access Modifiers | Supports all modifiers.                     | Methods are `public` by default.               |
-| Use Case         | When sharing implementation among classes.  | For defining a contract for unrelated classes. |      
+| Use Case         | When sharing implementation among classes.  | For defining a contract for unrelated classes. |   
+
+---
+
+## Annotations
+ - Annotations in Java are a powerful tool that provide metadata about the code but do not affect the execution directly. They are used to provide information about the program to the compiler, runtime, or tools that process the code. Annotations can be used for a variety of purposes like marking methods, classes, or fields, or even for processing during compilation or runtime.
+ - ### Types of Annotations in Java
+     - **Built-in Annotations**: Java provides a set of predefined annotations that are commonly used. 
+        - `@Override`: Indicates that a method is overriding a method from a superclass. 
+        - `@Deprecated`: Marks a method or class as deprecated, meaning it should no longer be used. 
+        - `@SuppressWarnings`: Instructs the compiler to suppress specific warnings. 
+        - `@SafeVarargs`: Ensures that the variable-length argument method does not perform unsafe operations. 
+        - `@FunctionalInterface`: Denotes that an interface is a functional interface (an interface with just one abstract method).
+     - **Custom Annotations**: You can create your own annotations to be used throughout your code. Custom annotations are defined using `@interface`.
+ - ### Creating and Using Custom Annotations
+     - 1. **Defining a Custom Annotation**:
+     ```java
+   package com.shivam.oop5.annotations;
+   // Defining a custom annotation
+   public @interface MyCustomAnnotation {
+       String description() default "No description provided";  // Optional value
+       int version() default 1;  // Default version
+   }
+   ```
+    - **In the above example**:
+       - `@interface`: This defines an annotation. 
+       - The annotation has two elements: description and version. These can be accessed when the annotation is used.
+    - 2. **Using the Custom Annotation**:
+    ```java
+   package com.shivam.oop5.annotations;
+   public class MyClass {
+       // Applying the custom annotation to a method
+       @MyCustomAnnotation(description = "This is a test method", version = 2)
+       public void testMethod() {
+           System.out.println("Test Method Executed");
+       }
+   }
+   ```
+    - 3. **Accessing the Annotation at Runtime (Reflection)**: If you want to access annotations at runtime, you can use reflection.
+    ```java
+    Copy code
+    package com.shivam.oop5.annotations;
+
+    import java.lang.annotation.Annotation;
+    import java.lang.reflect.Method;
+
+    public class AnnotationProcessor {
+
+        public static void main(String[] args) throws Exception {
+            Method method = MyClass.class.getMethod("testMethod");
+        
+            // Check if the method has MyCustomAnnotation
+            if (method.isAnnotationPresent(MyCustomAnnotation.class)) {
+                // Retrieve the annotation
+                MyCustomAnnotation annotation = method.getAnnotation(MyCustomAnnotation.class);
+            
+                // Access the values of the annotation
+                System.out.println("Description: " + annotation.description());
+                System.out.println("Version: " + annotation.version());
+            }
+        }
+    }
+   ```
+    - **In this code**:
+      - We use reflection `(Method.isAnnotationPresent())` to check if a method is annotated with `MyCustomAnnotation`. 
+      - Then, we retrieve the annotation and print its values using `getAnnotation()`.
+---
 
