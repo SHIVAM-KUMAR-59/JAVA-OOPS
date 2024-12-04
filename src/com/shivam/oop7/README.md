@@ -2,6 +2,24 @@
 
 ---
 
+## Table of Contents
+ - [Collections Framework](#collections-framework)
+    - Key Components of the Collections Framework
+    - Advantages of Collections Framework
+ - [`Vector` Class](#vector-class)
+    - Key Features of Vector
+    - When to Use Vector
+    - Difference Between `Vector` and `ArrayList`
+ - [Enums in Java](#enums-in-java)
+    - Key Features of Enums
+    - Advantages of Enums
+    - When to Use Enums
+ - [Enums in Inheritance](#enums-in-inheritance)
+    - Key Points about Enums and Inheritance
+    - Why Enums Cannot Extend Other Enums or Classes
+
+---
+
 ## Collections Framework
 ![Screenshot 2024-12-04 at 14.54.37.png](Screenshot%202024-12-04%20at%2014.54.37.png)
  
@@ -110,4 +128,18 @@
    
 ---
 
+## Enums in Inheritance
+ - In Java, enums are a special data type that represent a fixed set of constants. Enums are implicitly final and cannot be subclassed. This means that they do not participate in inheritance like regular classes. However, you can still apply some inheritance-like behavior within an enum by using interfaces or methods. 
+ - ### Key Points about Enums and Inheritance
+  - **Cannot Extend Other Enums or Classes**:
+      - An enum cannot inherit from any other class or enum, as all enums implicitly extend `java.lang.Enum`. 
+      - An enum can implement interfaces, but it cannot extend any class (other than `Enum`). 
+  - **Enum Constants as Objects**:
+      - Enum constants themselves are objects of the enum type. You can override methods within each enum constant.
+  - **Using Interfaces for Enum Inheritance**:
+      - While enums cannot inherit from other enums or classes, they can implement interfaces, which allows them to exhibit behavior similar to inheritance.
+ - ### Why Enums Cannot Extend Other Enums or Classes
+      - **Final by Default**: Enums are implicitly `final` to ensure that no other class can extend or modify them. This makes them safer and guarantees that the set of constants defined by the enum is immutable. 
+      - **Single Inheritance**: Java does not support multiple inheritance for classes, and since enums are implicitly `final`, they cannot extend any class or enum.
 
+---
