@@ -59,7 +59,7 @@
 ---
 
 ## `Vector` Class
- - The `Vector` class in Java is part of the `java.util` package and represents a resizable array. It is similar to `ArrayList `but is synchronized, meaning it is thread-safe and can be used in multi-threaded environments.
+ - The `Vector` class in Java is part of the `java.util` package and represents a resizable array. It is similar to `ArrayList `but is synchronized, meaning it is thread-safe and can be used in multithreaded environments.
  - ### Key Features of Vector
       - **Thread-Safety**: `Vector` is synchronized, making it thread-safe for concurrent access.
       - **Resizable Array**: Automatically grows as elements are added.
@@ -101,13 +101,13 @@
  - ### Syntax
    ```java
    enum EnumName {
-    CONSTANT1, CONSTANT2, CONSTANT3;
+    CONSTANT1, CONSTANT2, CONSTANT3
    }
    ```
  - ### Example
    ```java
    enum Day {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
    }
 
    public class EnumExample {
