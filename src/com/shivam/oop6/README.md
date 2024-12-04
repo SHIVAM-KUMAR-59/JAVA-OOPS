@@ -203,6 +203,144 @@
 
 ---
 
+## Object Cloning
+ - Object cloning refers to the process of creating a copy of an existing object. Java provides the Cloneable interface and the Object class's clone() method to achieve this. Cloning is a shallow copy by default, but you can implement deep copy manually.
+ - ### Steps to Perform Cloning
+      - **Implement Cloneable Interface**:
+           - A class must implement the Cloneable interface to indicate that it supports cloning.
+      - **Override the clone() Method**:
+           - The clone() method of the Object class is used to create a copy of an object.
+           - You must override it in your class and handle the CloneNotSupportedException.
+      - **Perform a Shallow or Deep Copy**:
+          - Shallow Copy: Copies the object's fields but not the referenced objects (nested objects).
+          - Deep Copy: Creates copies of the object and its referenced objects.
+ - ### Example Shallow Copy
+ ```java
+ class Student implements Cloneable {
+    int id;
+    String name;
+
+    // Constructor
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // Overriding the clone() method
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone(); // Calls Object's clone method
+    }
+
+    @Override
+    public String toString() {
+        return "Student{id=" + id + ", name='" + name + "'}";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Student student1 = new Student(101, "John");
+            Student student2 = (Student) student1.clone(); // Cloning student1 into student2
+
+            System.out.println("Original: " + student1);
+            System.out.println("Clone: " + student2);
+
+            // Verify if they are different objects
+            System.out.println("Are they the same object? " + (student1 == student2));
+
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+ ```
+
+ - ### Example Deep Copy
+ ```java
+ class Address implements Cloneable {
+    String city;
+
+    public Address(String city) {
+        this.city = city;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Address{city='" + city + "'}";
+    }
+}
+
+class Employee implements Cloneable {
+    int id;
+    String name;
+    Address address;
+
+    public Employee(int id, String name, Address address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        // Deep copy: clone the address explicitly
+        Employee cloned = (Employee) super.clone();
+        cloned.address = (Address) address.clone();
+        return cloned;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{id=" + id + ", name='" + name + "', address=" + address + "}";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Address address = new Address("New York");
+            Employee emp1 = new Employee(1, "Alice", address);
+            Employee emp2 = (Employee) emp1.clone(); // Deep cloning
+
+            System.out.println("Original: " + emp1);
+            System.out.println("Clone: " + emp2);
+
+            // Modify the address in the clone
+            emp2.address.city = "Los Angeles";
+
+            // Verify that the original's address is unaffected
+            System.out.println("After modification:");
+            System.out.println("Original: " + emp1);
+            System.out.println("Clone: " + emp2);
+
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+--- 
+
+## Difference Between Shallow Copy and Deep Copy
+
+| Aspect         | Shallow Copy                                                                                            | Deep Copy                                                                                             |
+|----------------|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| Definition     | Creates a new object but copies only the<br/>references of nested objects, not their<br/>actual values. | Creates a new object and recursively<br/>copies all objects, including nested</br>ones.               |
+| Data Copied    | Only the top-level object is duplicated;<br/>inner objects remain the same (shared<br/>references).     | Both the top-level object and all nested<br/>objects are duplicated to create<br/>independent copies. |
+| Independence   | Changes in the nested objects of the<br/>original will reflect in the copied object.                    | Changes in the nested objects of the<br/>original do not affect the copied object.                    |
+| Performance    | Faster because it only copies references,<br/>not the nested data.                                      | Slower because it involves recursively<br/>copying all nested objects.                                |
+| Implementation | Achieved using methods like<br/>`Object.clone()` in Java (default<br/>behavior).                        | Requires custom logic or explicit<br/>recursive copying of nested objects.                            |
+
+
+
 
 
 
