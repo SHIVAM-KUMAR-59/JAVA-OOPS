@@ -2,6 +2,29 @@
 
 ---
 
+## Table of Contents
+ - [Generics](#generics)
+    - Why Use Generics?
+    - How Generics Work
+    - Advantages of Generics
+ - [Wildcard in Generics](#wildcard-in-generics)
+    - Types of Wildcards
+ - [CompareTo Method](#compareto-method)
+ - [Lambda Functions](#lambda-functions)
+    - Key Characteristics
+    - Advantages of Lambdas
+ - [Exception Handling](#exception-handling)
+    - Key Terms
+    - Common Exception Handling Keywords
+    - Hierarchy of Common Exceptions
+ - [Object Cloning](#object-cloning)
+    - Steps to Perform Cloning
+    - Example Shallow Copy
+    - Example Deep Copy
+ - [Difference Between Shallow Copy and Deep Copy](#difference-between-shallow-copy-and-deep-copy)
+
+---
+
 ## Generics
  - Generics in Java are a feature that allows you to define classes, interfaces, and methods with type parameters. They enable you to write flexible, reusable, and type-safe code by allowing types to be specified as parameters when defining and using a generic class, interface, or method.
 
@@ -38,7 +61,7 @@
 
 ---
 
- - ### Wildcard in Generics
+ - ## Wildcard in Generics
   - Wildcards in Java Generics represent an unknown type and are denoted by the ? symbol. They provide flexibility when working with generic types, especially when the exact type is unknown or when you want to work with a range of types.
   - ### Types of wildcards
       - **Unbounded Wildcard**: `<?>` accepts any type.
@@ -66,7 +89,7 @@
  
 ---
 
-## Compare To Method
+## CompareTo Method
  - The `compareTo()` method in Java is part of the `Comparable` interface and is used to compare objects for order. It's a standard way to define the natural ordering of objects, such as numbers, strings, or custom types.
  - ### Syntax
    ```java
