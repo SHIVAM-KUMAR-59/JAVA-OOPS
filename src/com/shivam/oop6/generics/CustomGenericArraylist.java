@@ -2,6 +2,7 @@ package com.shivam.oop6.generics;
 
 import java.util.Arrays;
 
+// Generic class to implement Custom arraylist
 public class CustomGenericArraylist<T> {
 
     // Internal data array to store elements (uses Object for generic type support)
